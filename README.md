@@ -3,11 +3,11 @@ About jsanimation
 
 Home: http://github.com/jakevdp/JSAnimation
 
-Package license: BSD 2-Clause
+Package license: BSD2-Clause
 
 Feedstock license: BSD 3-Clause
 
-Summary: Javascript Animation exporter for matplotlib and IPython.
+Summary: Javascript Animation exporter for matplotlib and IPython
 
 
 
