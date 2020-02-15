@@ -1,5 +1,5 @@
 {% set version = "0.1" %}
-{% set commit = "b14771b6b6aa4429ca19c93aba8c315bf63ce227" %}
+{% set commit = "d290db11ebb5427769b76fc532f2d10c4ea3391f" %}
 
 package:
   name: jsanimation
@@ -8,20 +8,20 @@ package:
 source:
   fn: {{ commit }}.tar.gz
   url: https://github.com/jakevdp/JSAnimation/archive/{{ commit }}.tar.gz
-  sha256: 60be390282a76ef2681a11f29a4c4af57003c6bf81118dda9e512cce415761db
+  sha256: d09afaa47974410a2877995844626c9ed10d74e6ab934a92ec1c567364bb5b08
 
 build:
+  number: 2
   noarch: python
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
-    - pip
     - python
+    - pip
   run:
     - python
-    - matplotlib
+    - matplotlib-base
 
 test:
   imports:
@@ -29,8 +29,9 @@ test:
 
 about:
   home: http://github.com/jakevdp/JSAnimation
-  license: BSD 2-Clause
-  summary: 'Javascript Animation exporter for matplotlib and IPython.'
+  license: BSD2-Clause
+  license_file: LICENSE
+  summary: 'Javascript Animation exporter for matplotlib and IPython'
 
 
 extra:
